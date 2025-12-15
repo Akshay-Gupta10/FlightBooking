@@ -40,5 +40,13 @@ A full-stack flight booking web application built using **Vite + React** for the
 
 ---
 
-## 📂 Project Structure
+## ⚙️ Setup Instructions
+
+### Backend Setup
+
+```bash
+cd backend
+npm install
+npm run seed
+npm run dev
 
