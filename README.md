@@ -49,4 +49,12 @@ cd backend
 npm install
 npm run seed
 npm run dev
+```
 
+### Frontend Setup
+
+```bash
+cd frontend
+npm install
+npm run dev
+```
