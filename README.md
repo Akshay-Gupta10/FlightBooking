@@ -1,57 +1,44 @@
-✈️ Flight Booking System
+# ✈️ Flight Booking System
 
-A full-stack flight booking web application built using Vite + React (Frontend) and Node.js + Express + MongoDB (Backend).
-The system supports flight search, booking, wallet management, PDF ticket generation.
+A full-stack flight booking web application built using **Vite + React** for the frontend and **Node.js + Express + MongoDB** for the backend. The application supports flight search, booking, wallet management, PDF ticket generation.
 
-🚀 Features
+---
 
-✈️ Flights
+## 🚀 Features
 
-View all available flights
+### ✈️ Flights
+- View all available flights
+- Search flights by departure and arrival
+- Surge pricing indicators
 
-Search flights by departure & arrival
+### 📖 Bookings
+- Book flights 
+- View booking history
+- Download PDF tickets
 
-Surge pricing indicators (dynamic pricing)
+### 💰 Wallet
+- View wallet balance
+- Top-up wallet
+- Wallet amount deducted on booking
 
-📖 Bookings
+### 🎨 UI
+- Responsive UI using TailwindCSS
+  
+---
 
-Book flights 
+## 🛠 Tech Stack
 
-View booking history
+### Frontend
+- React (Vite)
+- React Router
+- TailwindCSS
 
-Generate and download PDF tickets
+### Backend
+- Node.js
+- Express.js
+- MongoDB (Mongoose)
 
-💰 Wallet
+---
 
-View wallet balance
+## 📂 Project Structure
 
-Top-up wallet
-
-Booking deducts wallet balance
-
-🎨 UI
-
-Responsive UI built with TailwindCSS
-
-🛠 Tech Stack
-Frontend
-
-React (Vite)
-
-React Router
-
-TailwindCSS
-
-Backend
-
-Node.js
-
-Express.js
-
-MongoDB (Mongoose)
-
-JWT Authentication
-
-bcryptjs
-
-PDF generation
