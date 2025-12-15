@@ -1,4 +1,4 @@
-const BASE = "http://localhost:5000/api";
+const BASE = import.meta.env.VITE_API_BASE || "http://localhost:5000/api";
 export async function searchFlights(dep = "", arr = "") {
   const p = new URLSearchParams();
   if (dep) p.append("departure", dep);
@@ -11,3 +11,47 @@ export const topUpWallet = async amt =>
 export const bookFlight = async (name, id) =>
   (await fetch(`${BASE}/bookings/book`, { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ passengerName: name, flight_id: id }) })).json();
 export const bookingHistory = async () => (await fetch(`${BASE}/bookings/history`)).json();
+
+// const BASE = import.meta.env.VITE_API_BASE || "http://localhost:5000/api";
+
+// // ---------- FLIGHTS ----------
+// export async function searchFlights(dep = "", arr = "") {
+//   const p = new URLSearchParams();
+//   if (dep) p.append("departure", dep);
+//   if (arr) p.append("arrival", arr);
+
+//   return (await fetch(`${BASE}/flights/search?${p}`)).json();
+// }
+
+// // ---------- WALLET ----------
+// export const getWallet = async () =>
+//   (await fetch(`${BASE}/bookings/wallet`, {
+//     headers: { ...authHeader() }
+//   })).json();
+
+// export const topUpWallet = async amt =>
+//   (await fetch(`${BASE}/bookings/wallet/topup`, {
+//     method: "POST",
+//     headers: {
+//       "Content-Type": "application/json",
+//       ...authHeader()
+//     },
+//     body: JSON.stringify({ amount: amt })
+//   })).json();
+
+// // ---------- BOOKINGS ----------
+// export const bookFlight = async (name, id) =>
+//   (await fetch(`${BASE}/bookings/book`, {
+//     method: "POST",
+//     headers: {
+//       "Content-Type": "application/json",
+//       ...authHeader()
+//     },
+//     body: JSON.stringify({ passengerName: name, flight_id: id })
+//   })).json();
+
+// export const bookingHistory = async () =>
+//   (await fetch(`${BASE}/bookings/history`, {
+//     headers: { ...authHeader() }
+//   })).json();
+
