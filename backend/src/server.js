@@ -19,6 +19,7 @@ app.use(express.json());
 
 connectDB();
 
+
 app.use("/api/flights", flightRoutes);
 app.use("/api/bookings", bookingRoutes);
 
